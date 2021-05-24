@@ -7,13 +7,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
   @Input() name: string;
+  @Input() public callbackFunction: () => void;
 
   constructor() {}
 
   ngOnInit(): void {}
 
   onclickFunction(): void {
-    //this.callbackFunction(args);
-    console.log('ola');
+    this.callbackFunction();
   }
 }

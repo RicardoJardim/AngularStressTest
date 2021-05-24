@@ -1,14 +1,32 @@
 <div id="tabs">
-  <div class="btn" [routerLink]="['/tabs/tab1']" id="btn1">
-    <img src="../../assets/tabIcons/creativity2.png" alt="" />
-    <label>btn1</label>
+  <div
+    class="btn"
+    [ngClass]="{ active: index == 1 }"
+    id="btn1"
+    tabindex="1"
+    (click)="changeRoute(1)"
+  >
+    <img tabindex="1" src="../../assets/tabIcons/creativity1.png" alt="" />
+    <label tabindex="1">btn1</label>
   </div>
-  <div class="btn" [routerLink]="['/tabs/tab2']" id="btn2">
-    <img src="../../assets/tabIcons/tablet1.png" alt="" />
-    <label>btn2</label>
+  <div
+    class="btn"
+    [ngClass]="{ active: index == 2 }"
+    id="btn2"
+    tabindex="2"
+    (click)="changeRoute(2)"
+  >
+    <img tabindex="2" src="../../assets/tabIcons/tablet1.png" alt="" />
+    <label tabindex="2">btn2</label>
   </div>
-  <div class="btn" [routerLink]="['/tabs/tab3']" id="btn3">
-    <img src="../../assets/tabIcons/modeling1.png" alt="" />
-    <label>btn3</label>
+  <div
+    class="btn"
+    [ngClass]="{ active: index == 3 }"
+    id="btn3"
+    tabindex="3"
+    (click)="changeRoute(3)"
+  >
+    <img tabindex="3" src="../../assets/tabIcons/modeling1.png" alt="" />
+    <label tabindex="3">btn3</label>
   </div>
 </div>

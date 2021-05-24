@@ -1,6 +1,7 @@
 @import "../../variables.sass"
 
 #tabs
+    height: $tab-bar-heigh
     display: flex
     align-items: center
     justify-content: space-around
@@ -11,16 +12,22 @@
     display: block !important
     margin-left: auto
     margin-right: auto
-    width: 10vw
+    width: 3em
     align-items: center
     justify-content: center
     text-align: center
 
     img
         padding-top: 0.4em
-        height: 4vh
+        height: 3.5vh
     label
         font-weight: normal
-        font-size: 0.8em
+        font-size: 0.9em
         font-family: $font-family
 
+
+.active
+    color: $tab-bar-icon-color-selected
+
+    img
+        filter: invert(100%)

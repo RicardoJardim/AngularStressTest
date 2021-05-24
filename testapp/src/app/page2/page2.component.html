@@ -1,1 +1,26 @@
-<p>page2 works!</p>
+<div class="page">
+  <div class="middle">
+    <div id="divElement">
+      <div class="views" *ngFor="let a of views"></div>
+      <button
+        class="views"
+        style="background-color: blue"
+        *ngFor="let a of btns"
+      >
+        click me
+      </button>
+    </div>
+    <app-button
+      name="FetchData"
+      [callbackFunction]="onClickFunction"
+    ></app-button>
+    <app-button
+      name="Create Views"
+      [callbackFunction]="createViews"
+    ></app-button>
+    <app-button
+      name="Create Buttons"
+      [callbackFunction]="createBtns"
+    ></app-button>
+  </div>
+</div>
