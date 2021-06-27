@@ -14,11 +14,14 @@ export class TabsComponent implements OnInit {
 
   ngOnInit(): void {
     const path = this.locat.path().charAt(this.locat.path().length - 1);
-    this.index = parseInt(path);
+    if (typeof path === 'number') {
+      this.index = parseInt(path);
+    } else {
+      this.index = 1;
+    }
   }
 
   changeRoute = (e: number): void => {
-    console.log(e);
     if (e != this.index) {
       this.index = e;
       this.router.navigateByUrl('/tab' + this.index);
