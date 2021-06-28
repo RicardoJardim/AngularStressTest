@@ -14,7 +14,7 @@ export class HttpService {
 
   prepareDataRequest(url: string): Observable<any> {
     // Define the data URL
-    const dataUrl = 'https://random-data-api.com/api/' + url;
+    const dataUrl = 'http://192.168.1.112:3000/' + url;
     // Prepare the request
     return this.fetchData(dataUrl);
   }
